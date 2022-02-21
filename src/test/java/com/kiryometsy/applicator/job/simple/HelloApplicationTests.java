@@ -1,4 +1,4 @@
-package com.example.Hello;
+package com.kiryometsy.applicator.job.simple;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
