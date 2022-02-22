@@ -1,5 +1,6 @@
-package com.kiryometsy.applicator.job.simple;
+package com.kiryometsy.applicator.job.simple.controllers;
 
+import com.kiryometsy.applicator.job.simple.JobApplicator;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ class JobApplicatorControllerTest {
 
     @Test
     public void helloGradle() throws Exception {
-        mvc.perform(get("/"))
+        mvc.perform(get("/hello"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Hello Gradle!"));
     }
