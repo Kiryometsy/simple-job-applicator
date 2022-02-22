@@ -1,13 +1,13 @@
-package com.example.Hello;
+package com.kiryometsy.applicator.job.simple;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HelloApplication {
+public class JobApplicator {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloApplication.class, args);
+		SpringApplication.run(JobApplicator.class, args);
 	}
 
 }
