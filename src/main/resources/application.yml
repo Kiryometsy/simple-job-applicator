@@ -1,0 +1,5 @@
+# Show details of health endpoint
+management.endpoint.health.show-details: always
+
+host:
+  name: https://nofluffjobs.com/pl/praca-it/krakow/backend

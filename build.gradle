@@ -17,6 +17,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator:2.6.3'
 	implementation 'org.springframework.boot:spring-boot-dependencies:2.6.3'
 	implementation 'org.springframework.boot:spring-boot-starter-web:2.6.3'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	implementation 'org.testng:testng:7.5'
 	implementation 'junit:junit:4.13.2'
 
