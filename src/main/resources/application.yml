@@ -2,4 +2,6 @@
 management.endpoint.health.show-details: always
 
 host:
-  name: https://nofluffjobs.com/pl/praca-it/krakow/backend
+  name: https://nofluffjobs.com
+  endpoint: /pl/praca-it/krakow/backend
+    #/api/search/posting
