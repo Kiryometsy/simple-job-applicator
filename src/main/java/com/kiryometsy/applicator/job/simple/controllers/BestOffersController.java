@@ -1,13 +1,16 @@
 package com.kiryometsy.applicator.job.simple.controllers;
 
-import com.kiryometsy.applicator.job.simple.dto.CriteriaSearch;
+import com.kiryometsy.applicator.job.simple.model.CriteriaSearch;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import java.util.Arrays;
-import java.util.List;
+import java.net.URI;
+
+import static com.kiryometsy.applicator.job.simple.model.CriteriaSearch.defaultCriteriaSearch;
 
 @RestController
 @RequestMapping("/best-offers")
@@ -21,17 +24,20 @@ public class BestOffersController {
     @Value("${host.endpoint}")
     private String endPoint;
 
-
+    @SneakyThrows
     @GetMapping
-    public List<CriteriaSearch> namedParams(@RequestParam(value="page", required = false) String page) {
-        webClientBuilder.build()
-                .get()
-                .uri(hostName + endPoint + "backend?criteria=seniority%3Dtrainee,junior%20requirement%3Djava&page=1")
-                .retrieve();
-        return Arrays.asList(
-                new CriteriaSearch("requierement");
-        );
+    public String namedParams(@RequestParam(value="page", required = false) String page) {
+        WebClient client = WebClient.create();
 
+        String response = client.post()
+                .uri(new URI(hostName + endPoint))
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .accept(MediaType.APPLICATION_JSON)
+                .body(defaultCriteriaSearch(), CriteriaSearch.class)
+                .retrieve()
+                .bodyToMono(String.class)
+                .block();
+        return response;
     }
 }
 
