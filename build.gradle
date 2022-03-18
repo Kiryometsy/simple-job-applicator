@@ -7,24 +7,22 @@ plugins {
 
 group = 'com.kiryometsy'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-actuator:2.6.3'
-	implementation 'org.springframework.boot:spring-boot-dependencies:2.6.3'
-	implementation 'org.springframework.boot:spring-boot-starter-web:2.6.3'
-	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator:2.6.4'
+	implementation 'org.springframework.boot:spring-boot-dependencies:2.6.4'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.6.4'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux:2.6.4'
 	implementation 'org.testng:testng:7.5'
 	implementation 'junit:junit:4.13.2'
 	implementation 'com.google.code.gson:gson:2.9.0'
-    implementation 'org.projectlombok:lombok:1.18.20'
-	implementation 'com.ginsberg:cirkle:1.0.1'
+    implementation 'org.projectlombok:lombok:1.18.22'
 
-	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.3'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.4'
 
 	components {
 		withModule('org.springframework:spring-beans') {
