@@ -1,0 +1,7 @@
+# Show details of health endpoint
+management.endpoint.health.show-details: always
+
+host:
+  name: https://nofluffjobs.com
+  endpoint: /api/search/posting?limit=40&offset=0&salaryCurrency=PLN&salaryPeriod=month&region=pl
+    #/api/search/posting

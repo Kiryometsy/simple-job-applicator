@@ -1,0 +1,13 @@
+{
+  "criteriaSearch": {
+    "requirement": ["java"],
+    "category": ["backend"],
+    "city": ["kraków"],
+    "salary": [],
+    "employment": [],
+    "seniority": ["trainee","junior"],
+    "more": [],
+    "keyword": [],
+    "company": []
+  }
+}

@@ -1,10 +1,12 @@
-package com.kiryometsy.applicator.job.simple;
+package com.kiryometsy.applicator.job.simple.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/")
-public class JobApplicatorController {
+@RestController
+@RequestMapping("/hello")
+public class HelloController {
 
     @GetMapping
     public String helloGradle() {
